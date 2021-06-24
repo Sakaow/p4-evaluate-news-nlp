@@ -1,43 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
-    </head>
 
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluate News Project</title>
+</head>
 
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+<body>
+    <div class="container">
+        <div class="content">
+            <header>
+                <h1>Evaluate News Article with Natural Language Processing</h1>
+            </header>
 
-        <main>
-            <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
-            </section>
+            <main>
+                <section>
+                    <form class="" onsubmit="return Client.handleSubmit(event)">
+                        <input class="myinput" id="name" type="text" name="input" value="" placeholder="Name">
+                        <input class="mybutton" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
+                            onsubmit="return Client.handleSubmit(event)">
+                    </form>
+                </section>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
-
+                <section>
+                    <strong>Form Results:</strong>
+                    <div id="results"></div>
+                </section>
+            </main>
+        </div>
         <footer>
-            <p>This is a footer</p>
+            <h3>Udacity Frontend Web Developer ND-Project 4</h3>
         </footer>
+    </div>
+</body>
 
-    </body>
 </html>
