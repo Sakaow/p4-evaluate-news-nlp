@@ -13,8 +13,8 @@ const port = process.env.PORT || 8081;
 // MeaningCloudAPI
 dotenv.config();
 const mockAPIResponse = require('./mockAPI.js');
-const mainAPI = 'https://api.meaningcloud.com/sentiment-2.1?key=';
-const apikey = process.env.API_KEY;
+const mainAPI = 'https://api.meaningcloud.com/sentiment-2.1?';
+const apiKey = process.env.API_KEY;
 
 
 // Use middleware
@@ -43,8 +43,8 @@ app.get('/test', function (req, res) {
 app.post('/information', getInfomation);
 async function getInfomation(req, res) {
     
-    const urlDataForm = req.body.urlDataForm;    
-    const url = `${mainAPI}&lang=auto&url=${urlDataForm}`;
+    const urlDataForm  = req.body.urlDataForm;    
+    const url = `${mainAPI}key=${apiKey}&lang=auto&url=${urlDataForm}&model=general`;
     const sentiment_response = await fetch(url, {
         method: "POST",
         headers: {
@@ -59,5 +59,5 @@ async function getInfomation(req, res) {
     } catch(err){
         console.log(err.stack);
     }  
-   
+
 }
