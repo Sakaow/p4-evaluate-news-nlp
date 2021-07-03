@@ -43,7 +43,7 @@ app.get('/test', function (req, res) {
 app.post('/information', getInfomation);
 async function getInfomation(req, res) {
     
-    const {urlDataForm}  = req.body.urlDataForm;    
+    const {urlDataForm}  = req.body;    
     const url = `${mainAPI}key=${apiKey}&lang=auto&url=${urlDataForm}&model=general`;
     const sentiment_response = await fetch(url, {
         method: "POST",
