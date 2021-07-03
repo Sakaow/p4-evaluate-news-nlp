@@ -1,8 +1,10 @@
+import fetch from "node-fetch"
+
 function handleSubmit(event) {
     event.preventDefault()
 
     // check what text was put into the form field
-    let urlDataForm = document.getElementById('name').value
+    let urlDataForm = document.getElementById('inputURL').value
     Client.validURL(urlDataForm)
 
     console.log("::: Form Submitted :::")
@@ -19,9 +21,29 @@ function handleSubmit(event) {
     .then((res) => res.json())
     .then(function(res) {
         console.log('Data from the MC-API', res);
-        document.getElementById('results').innerHTML = res.message
+        document.getElementById('results').innerHTML = res.agreement;
+        document.getElementById('subjectivity').innerHTML = res.subjectivity;
+        document.getElementById('scores').innerHTML = `Polarity: ${scores(res.score_tag)}`;
+        document.getElementById('confidence').innerHTML = res.confidence;
     })
+
+    function scores(text){
+        if ( text === 'P+' ) {
+            return 'Strong positive';
+        } else if (text === 'P') {
+            return 'Positive';
+        } else if (text === 'NEU') {
+            return 'Neutral';
+        } else if (text === 'N') {
+            return 'Negative';
+        } else if ( text === 'N+') {
+            return 'Strong negative';
+        } else {
+            return 'Without polarity';
+        }
+    }
+        
 }
 
-async function retrieveData ()
+
 export { handleSubmit }

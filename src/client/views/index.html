@@ -16,22 +16,24 @@
             </header>
 
             <main>
-                <section>
+                <section class="input-info">
                     <form class="" onsubmit="return Client.handleSubmit(event)">
-                        <input class="myinput" id="name" type="text" name="input" value="" placeholder="Name">
-                        <input class="mybutton" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
-                            onsubmit="return Client.handleSubmit(event)">
+                        <input class="myinput" id="inputURL" type="text" name="input" value="" placeholder="Please enter a valid URL here">
+                        <input class="mybutton" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                     </form>
                 </section>
 
-                <section>
-                    <strong>Form Results:</strong>
-                    <div id="results"></div>
+                <section class="output-info">
+                    <h2>Form Results:</h2>
+                    <div class="display" id="results"></div>
+                    <div class="subjectivity" id="subjectivity"></div>
+                    <div class="score" id="scores"></div>
+                    <div class="conf" id="confidence"></div>
                 </section>
             </main>
         </div>
         <footer>
-            <h3>Udacity Frontend Web Developer ND-Project 4</h3>
+            <h3>Udacity FEND-Project 4</h3>
         </footer>
     </div>
 </body>

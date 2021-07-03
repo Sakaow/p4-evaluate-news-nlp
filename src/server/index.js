@@ -27,8 +27,8 @@ console.log(__dirname)
 
 // root send file to the browser
 app.get('/', function (req, res) {
-    // res.sendFile('dist/index.html')
-    res.sendFile(path.resolve('src/client/views/index.html'))
+    res.sendFile('dist/index.html')
+    //res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
 // designates what port the app will listen to for incoming requests
@@ -51,9 +51,10 @@ async function getInfomation(req, res) {
             "Content-Type": "application/json",
         }
     })
-   
+    console.log(urlDataForm);
     try {
-        const data = await sentiment_response.json();        
+        const data = await sentiment_response.json();
+        console.log('Data from MC: ', data);      
         res.send(data);
     } catch(err){
         console.log(err.stack);
