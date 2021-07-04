@@ -21,7 +21,6 @@ Create a `.env` file at the root of your project and put your api key in it.
 
 ```
 API_KEY=YOUR_API_KEY
-
 ```
 
 To hide your API KEY from uploaded it to git repository then put the `.env` file into the `.gitignore` file.
@@ -34,10 +33,16 @@ To hide your API KEY from uploaded it to git repository then put the `.env` file
 
 ### Running / Development
 
-Run the development:
+- Run the development:
+
 `npm run build-dev`
-Run the production:
+
+- Run the production:
+
 `npm run build-prod`
-Start the server:
+
+- Start the server:
+
 `npm start`
-Visit your app at (http://localhost:8081)
+
+- Visit your app at (http://localhost:8081)
