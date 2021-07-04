@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet" />
     <title>FEND NLP</title>
 </head>
 
@@ -22,17 +22,20 @@
                 <section class="input-info">
                     <form class="" onsubmit="return Client.handleSubmit(event)">
                         <label for="url">Enter URL:</label>
-                        <input class="myinput" id="inputURL" type="text" name="input" value="" placeholder="Please enter a valid URL here">
-                        <input class="mybutton" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                        <input class="myinput" id="inputURL" type="text" name="input" value=""
+                            placeholder="Please enter a valid URL here" />
+                        <input class="mybutton" type="submit" name="" value="submit"
+                            onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)" />
                     </form>
+                    
                 </section>
-
+                <div class="err_message" id="invalid"></div>
                 <section class="output-info">
                     <h2>Form Results:</h2>
                     <div class="display" id="results"></div>
-                    <div class="subjectivity" id="subjectivity"></div>
-                    <div class="score" id="scores"></div>
-                    <div class="conf" id="confidence"></div>
+                    <div class="display" id="subjectivity"></div>
+                    <div class="display" id="scores"></div>
+                    <div class="display" id="confidence"></div>
                 </section>
             </main>
         </div>

@@ -33,6 +33,13 @@ $text-color: #fff;
     text-align: center;
   }
 }
+.err_message {
+  // background: black;
+  font-size: 2rem;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
 
 input {
   padding: 5px 20px;
@@ -44,12 +51,18 @@ input {
 
 .output-info {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1rem;
   border-radius: 3px;
   min-height: 200px;
+  padding: 20px;
   background: rgba(45, 3, 182, 0.5);
+}
+
+.display {
+  color: $text-color;
+  font-size: 1.5rem;
 }

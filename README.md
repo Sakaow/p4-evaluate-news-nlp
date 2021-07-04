@@ -27,9 +27,17 @@ To hide your API KEY from uploaded it to git repository then put the `.env` file
 
 ### Installation
 
-`git clone <repository-url>` this repository
-`cd` to the project location
-`npm install`
+Clone this repository from github
+
+- `git clone <repository-url>`
+
+Get into your local project
+
+- `cd to-your-project`
+
+To install packages run
+
+- `npm install`
 
 ### Running / Development
 
