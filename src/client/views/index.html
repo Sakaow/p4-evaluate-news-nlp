@@ -27,7 +27,7 @@
                         <input class="mybutton" type="submit" name="" value="submit"
                             onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)" />
                     </form>
-                    
+
                 </section>
                 <div class="err_message" id="invalid"></div>
                 <section class="output-info">
@@ -43,6 +43,15 @@
             <h3>Udacity FEND Project 4</h3>
         </footer>
     </div>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
 </body>
 
 </html>

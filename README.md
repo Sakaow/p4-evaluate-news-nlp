@@ -35,7 +35,7 @@ Get into your local project
 
 - `cd to-your-project`
 
-To install packages run
+To install packages
 
 - `npm install`
 
